@@ -8,9 +8,9 @@ add_action( 'wp_enqueue_scripts', 'my_style' );
 function register_my_menus() {
   register_nav_menus(
     array(
-        'header-menu' => __( 'Mein Top Menu' ),
-        'mobile-menu' => __( 'Mein Handy Menu' ),
-        'footer-menu' => __( 'Das untere Menu' )
+        'header-menu' => __( 'Header Menu' ),
+        'mobile-menu' => __( 'Mobile Menu' ),
+        'footer-menu' => __( 'Footer Menu' )
      )
    );
  }
