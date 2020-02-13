@@ -17,9 +17,8 @@
     <main>
         <article>
 
-            <!--Dies ist der berühmte Loop-->
-            <?php 
-            while( have_posts() ) : the_post(); ?>
+            <!--The Loop-->
+            <?php while( have_posts() ) : the_post(); ?>
 
 
             <h2><?php the_title(); ?></h2>
@@ -27,12 +26,14 @@
 
 
             <?php endwhile; ?>
+            <!--Loop ends-->
+            
         </article>
     </main>
 
     <footer>
         <nav>
-            <?php wp_nav_menu( array( 'footer-menu' ) ); ?>
+            <?php wp_nav_menu( array( 'theme_location' => 'footer-menu' ) ); ?>
         </nav>
     </footer>
 
