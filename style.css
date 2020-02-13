@@ -1,7 +1,90 @@
 /*
 Theme Name: miniLAB
+A ridiculously simple wordPress theme by recodeLAB.
+Use at your own risk!
+
+Author: recodeLAB
+Author URI: www.recodelab.com
+Version: a.1.1.1
+License: Creative Commons Attribution-NonCommercial 4.0 International
+License URI: https://creativecommons.org/licenses/by-nc/4.0/legalcode
 */
 
-body {
-    color: red;
+
+/*-------------
+IMPORTS
+-------------*/
+
+@import url(https://use.fontawesome.com/releases/v5.6.3/css/all.css);
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700&display=swap');
+/*font-family: 'Roboto', sans-serif;*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,600,700&display=swap');
+/*font-family: 'Roboto Slab', serif;*/
+
+/*-------------
+RESET
+-------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
+
+a {
+    color: #000;
+}
+
+a:hover {
+    color: rgb(255,128,0);
+}
+
+/*-------------
+TYPOGRAPHY
+-------------*/
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/*-------------
+LAYOUT
+-------------*/
+.more-link,
+h1,h2,h3,h4,
+ul,ol,
+p {
+    padding: 1rem 2rem;
+}
+
+/*-------------
+NAVIGATION
+-------------*/
+
+nav ul {
+    display: flex;
+}
+
+nav li {
+    list-style-type: none;
+    margin-right: 1em;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+/*-------------
+COLOR & STYLE
+-------------*/
+
+/*-------------
+RESPONSIVE DESIGN (MOBILE FIRST)
+-------------*/
+
+/*-------------
+OVERRIDES
+-------------*/
