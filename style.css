@@ -53,11 +53,17 @@ body {
 /*-------------
 LAYOUT
 -------------*/
+.home .my-featured-image img,
 .more-link,
 h1,h2,h3,h4,
 ul,ol,
 p {
     padding: 1rem 2rem;
+}
+
+.home .my-featured-image img {
+    width: 25%;
+    height: auto;
 }
 
 /*-------------

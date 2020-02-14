@@ -15,20 +15,29 @@
     <h1><?php bloginfo('title'); ?></h1>
 
     <main>
+
+
+        <!--The Loop-->
+        <?php while( have_posts() ) : the_post(); ?>
+        
         <article>
-
-            <!--The Loop-->
-            <?php while( have_posts() ) : the_post(); ?>
-
-
-            <h2><?php the_title(); ?></h2>
-            <?php the_content(); ?>
-
-
-            <?php endwhile; ?>
-            <!--Loop ends-->
             
+            <span class="image my-featured-image">
+                <?php echo the_post_thumbnail()?>
+            </span>
+
+            <header class="major">
+                <h3><a href="<?php echo esc_url( get_permalink() ); ?>" class="link"><?php the_title(); ?></a></h3>
+                <p><?php the_excerpt(); ?></p>
+                <!--<?php the_content(); ?>-->
+            </header>
+
         </article>
+        
+        <?php endwhile; ?>
+        <!--Loop ends-->
+
+
     </main>
 
     <footer>
