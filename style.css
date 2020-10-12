@@ -92,23 +92,24 @@ header h1 {
     padding-top: 17vw;
 }
 
-section.my-featured-img {
+.my-featured-img {
     width: 100%;
 }
 
-section.my-featured-image img {
+.my-featured-image img {
     width: 100%;
     /*Dieser Wert wurde in Schritt 3 der Responsive Design Anpassung von 25% auf 100% gesetzt */
     height: auto;
 }
 
-section.my-featured-image .front-caption {
+.my-featured-image .front-caption {
     font-size: 0.5em;
     text-align: right;
     padding-right: 2rem;
 }
 
-.home section.my-featured-image .front-caption {
+.home .my-featured-image .front-caption,
+.blog .my-featured-image .front-caption {
     padding-right: 0;
 }
 
@@ -126,7 +127,7 @@ nav li {
     margin-right: 1em;
 }
 
-section.my-featured-image .front-caption a,
+.my-featured-image .front-caption a,
 nav a {
     text-decoration: none;
 }
@@ -232,7 +233,8 @@ Hauptnavigation taucht ab 600px (d.h. wenn nicht mehr Mobiltelefon vertikal geha
     font-size: 100%;
 }
 
-    .home section.my-featured-image {
+    .home .my-featured-image,
+    .blog .my-featured-image    {
         width: 50%;
     }
 
@@ -240,7 +242,8 @@ Hauptnavigation taucht ab 600px (d.h. wenn nicht mehr Mobiltelefon vertikal geha
 
 @media only screen and (min-width: 1280px) {
 
-    .home section.my-featured-image {
+    .home .my-featured-image,
+    .blog .my-featured-image {
         width: 33%;
     }
 

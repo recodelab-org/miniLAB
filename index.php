@@ -45,7 +45,7 @@ https://www.gnu.org/licenses/
 
         <article>
 
-            <section class="image my-featured-image">
+            <figure class="image my-featured-image">
                 <?php echo the_post_thumbnail()?>
 
                 <?php 
@@ -55,7 +55,7 @@ https://www.gnu.org/licenses/
                 ?>
 
 
-            </section>
+            </figure>
 
             <section class="content my-article-content">
                 <h3><a href="<?php echo esc_url( get_permalink() ); ?>" class="link"><?php the_title(); ?></a></h3>
