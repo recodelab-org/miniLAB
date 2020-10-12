@@ -1,16 +1,18 @@
 # miniLAB
-A ridiculously simple WordPress theme by recodeLAB.
+A ridiculously simple WordPress theme by Enno Hyttrek.
 
-Version: a.1.1.4
+Version: a.1.1.5
 
 The current version is absolutely work-in-progress. It is only the minimal shell for a WordPress theme to function. There are no separate PHP template parts, as WP themes usually have. This probably won't change. One objective of this project is to create a theme that accomplishes everything with just the index.php as a template. This might fail or lead nowhere, but if so, so be it.
 
 Enno Hyttrek, recodeLAB
-February 19, 2020
+October 12, 2020
 
 
-Please note, that this work is published under a Creative Commons Attribution-NonCommercial 4.0 International License*.
-https://creativecommons.org/licenses/by-nc/4.0/legalcode
+Copyright (C) 2020  Enno Hyttrek
 
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
-*) We might at a later point publish it under a regular, and probably more suitable GNU GPL.
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+https://www.gnu.org/licenses/
