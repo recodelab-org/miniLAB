@@ -29,7 +29,7 @@ if ($thumbnail_image && isset($thumbnail_image[0])) {
 echo '<div class="front-caption">'.$thumbnail_image[0]->post_excerpt.'</div>';
 }
 } 
-//https://wordpress.stackexchange.com/questions/111937/how-to-show-featured-image-caption-only-if-it-exist
+
 
 /*
 miniLAB – a ridiculously simple wordPress theme.

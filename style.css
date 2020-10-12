@@ -164,6 +164,7 @@ nav.mobile-nav ul {
 
 nav.mobile-nav ul li {
     width: 100vw;
+    margin-bottom: 1px;
 }
 
 nav.mobile-nav ul li a {
@@ -171,13 +172,13 @@ nav.mobile-nav ul li a {
     width: 100%;
     font-size: 10vw;
     padding: 3vw 2rem;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-bottom: 1px solid rgba(200, 200, 200, 0.7);
+    background-color: rgba(30, 40, 50, 0.9);
+    color: #fff;
 }
 
 nav.mobile-nav ul li a:active {
-    background-color: rgba(30, 40, 50, 0.9);
-    color: #fff;
+    background-color: #fff;
+    color: rgb(30, 40, 50);
 }
 
 
@@ -199,7 +200,7 @@ RESPONSIVE DESIGN (MOBILE FIRST)
         padding-top: 1rem;
     }
     
-        /*
+/*
 Hauptnavigation taucht ab 600px (d.h. wenn nicht mehr Mobiltelefon vertikal gehalten) wieder auf, Burger Icon verschwindet. Könnte man drüber streiten, ob das evtl. auch erst beim nächsten Breakpoint geschehen sollte.
 */
 
