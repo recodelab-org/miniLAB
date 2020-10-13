@@ -4,7 +4,7 @@ A ridiculously simple wordPress theme.
 
 Author: Enno Hyttrek
 Author URI: www.recodelab.com
-Version: a.1.1.6
+Version: a.1.1.7
 
 Copyright (C) 2020  Enno Hyttrek
 
@@ -47,9 +47,6 @@ a:hover {
     color: rgb(255, 128, 0);
 }
 
-/*
-Hauptnavigation verschwindet bei Mobildarstellung (also unter 600px Viewportbreite) aufgrund des folgenden Resets.
-*/
 
 nav.main-nav,
 nav-mobile-nav {
@@ -75,7 +72,6 @@ body {
 
 
 .burger-icon i,
-/*Diese Zeile ist dazugekommen, um auch das 'Burger Icon' korrekt im Layout zu platzieren.*/
 .home .my-featured-image,
 .more-link,
 h1,
@@ -92,13 +88,16 @@ header h1 {
     padding-top: 17vw;
 }
 
+main {
+    min-height: 60vh;
+}
+
 .my-featured-img {
     width: 100%;
 }
 
 .my-featured-image img {
     width: 100%;
-    /*Dieser Wert wurde in Schritt 3 der Responsive Design Anpassung von 25% auf 100% gesetzt */
     height: auto;
 }
 
@@ -116,6 +115,16 @@ header h1 {
 /*-------------
 NAVIGATION
 -------------*/
+
+
+nav.main-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255,255,255,0.8);
+
+}
+
 
 nav ul {
     display: flex;
@@ -187,6 +196,20 @@ nav.mobile-nav ul li a:active {
 COLOR & STYLE
 -------------*/
 
+body {
+        background-color: rgb(30, 40, 50);
+}
+
+header,
+main {
+          background-color: #fff;  
+}
+
+footer,
+footer a {
+    color: #fff;
+}
+
 /*-------------
 RESPONSIVE DESIGN (MOBILE FIRST)
 -------------*/
@@ -198,12 +221,9 @@ RESPONSIVE DESIGN (MOBILE FIRST)
 }
     
     header h1 {
-        padding-top: 1rem;
+        padding-top: 3rem;
     }
-    
-/*
-Hauptnavigation taucht ab 600px (d.h. wenn nicht mehr Mobiltelefon vertikal gehalten) wieder auf, Burger Icon verschwindet. Könnte man drüber streiten, ob das evtl. auch erst beim nächsten Breakpoint geschehen sollte.
-*/
+
 
     nav.main-nav {
         display: block;
@@ -233,18 +253,28 @@ Hauptnavigation taucht ab 600px (d.h. wenn nicht mehr Mobiltelefon vertikal geha
     font-size: 100%;
 }
 
+/*
     .home .my-featured-image,
     .blog .my-featured-image    {
         width: 50%;
     }
+*/
 
 }
 
 @media only screen and (min-width: 1280px) {
 
-    .home .my-featured-image,
-    .blog .my-featured-image {
-        width: 33%;
+
+    
+    header,
+    nav, 
+    main,
+    footer {
+        padding: 0 25vw 0 25vw;
+    }
+    
+    footer nav {
+        padding: 0;
     }
 
 }
@@ -253,3 +283,8 @@ Hauptnavigation taucht ab 600px (d.h. wenn nicht mehr Mobiltelefon vertikal geha
 /*-------------
 OVERRIDES
 -------------*/
+
+/*
+header {
+    background-color: pink;
+}
