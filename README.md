@@ -1,7 +1,7 @@
 # miniLAB
 A ridiculously simple WordPress theme by Enno Hyttrek.
 
-Version: a.1.1.7
+Version: a.1.1.8
 
 The current version is absolutely work-in-progress. It is only the minimal shell for a WordPress theme to function. There are no separate PHP template parts, as WP themes usually have. This probably won't change. One objective of this project is to create a theme that accomplishes everything with just the index.php as a template. This might fail or lead nowhere, but if so, so be it.
 
