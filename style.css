@@ -20,13 +20,16 @@ https://www.gnu.org/licenses/
 IMPORTS
 -------------*/
 
-@import url(https://use.fontawesome.com/releases/v5.6.3/css/all.css);
+@import url('https://use.fontawesome.com/releases/v5.6.3/css/all.css');
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700&display=swap');
 /*font-family: 'Roboto', sans-serif;*/
 
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,600,700&display=swap');
 /*font-family: 'Roboto Slab', serif;*/
+
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,300;0,700;1,300&display=swap');
+/*font-family: 'Public Sans', sans-serif;*/
 
 /*-------------
 RESET
@@ -61,7 +64,8 @@ TYPOGRAPHY
 -------------*/
 
 body {
-    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+    font-family: 'Public Sans', sans-serif;
+/*    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;*/
     font-weight: 300;
 }
 
@@ -288,7 +292,3 @@ RESPONSIVE DESIGN (MOBILE FIRST)
 OVERRIDES
 -------------*/
 
-/*
-header {
-    background-color: pink;
-}
