@@ -93,7 +93,7 @@ https://www.gnu.org/licenses/
         }
 
     </script>
-
+    <?php wp_footer() ?>
 </body>
 
 </html>
