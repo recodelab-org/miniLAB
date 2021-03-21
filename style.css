@@ -6,7 +6,7 @@ Author: Enno Hyttrek
 Author URI: www.recodelab.com
 Version: a.1.1.9
 
-Copyright (C) 2020  Enno Hyttrek
+Copyright (C) 2020 -2021 Enno Hyttrek
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
@@ -260,13 +260,6 @@ RESPONSIVE DESIGN (MOBILE FIRST)
     body {
     font-size: 100%;
 }
-
-/*
-    .home .my-featured-image,
-    .blog .my-featured-image    {
-        width: 50%;
-    }
-*/
 
 }
 

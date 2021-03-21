@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--
 miniLAB – a ridiculously simple wordPress theme.
-Copyright (C) 2020  Enno Hyttrek
+Copyright (C) 2020 - 2021  Enno Hyttrek
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
