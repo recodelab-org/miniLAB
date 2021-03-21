@@ -1,5 +1,5 @@
 # miniLAB
-A ridiculously simple WordPress theme by Enno Hyttrek.
+A ridiculously simple WordPress theme by Enno Hyttrek and recodeLAB.
 
 Version: a.1.1.9
 
@@ -9,7 +9,9 @@ Please note, that in this version the functions.php doesn't yet include any func
 
 Feel free to use this theme for your own experiments, but please be aware, that it is nowhere near 'production ready'. The disclaimers in the GNU license fully apply and I take no responsibility if you use it for a project and then run into trouble.
 
-Still: Enjoy!
+The theme layout behaves fairly responsive, in a minimal basic way. So if you want to study the basics of how a WP theme can be responsive, miniLAB could give you a starting point here (however, we can't provide explantions or a tutorial for/with it at this point, sorry -- maybe in the future).
+
+Enjoy!
 
 Enno Hyttrek, recodeLAB
 March 21, 2021
