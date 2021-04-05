@@ -1,9 +1,9 @@
 # miniLAB
 A ridiculously simple WordPress theme by Enno Hyttrek and recodeLAB.
 
-Version: a.1.1.9
+Version: 1.2.0
 
-The current version is absolutely work-in-progress. It is only the minimal shell for a WordPress theme to function. There are no separate PHP template parts, as WP themes usually have. This probably won't change. One objective of this project is to create a theme that accomplishes everything with just the index.php as a template. This might fail or lead nowhere, but if so, so be it.
+The current version is still absolutely work-in-progress. It is only the minimal shell for a WordPress theme to function. Since version 1.2.0 there are separate PHP template parts, as WP themes usually have, while before there was only one index.php with the code that usually sits in header.php and footer.php integrated. One objective of this project initially was, to create a theme that accomplishes everything with just the index.php as a template. However, we felt, that the theme will still be minimal enough with just a handful templates and with header and footer neatly separated, as you do.
 
 Please note, that in this version the functions.php doesn't yet include any function to enqueue JavaScript and/or JQuery, like any complete theme should have. The theme itself uses some quick & dirty Vanilla JS added manually in the footer area for the mobile menu. But to make PlugIns which for example rely on JQuery cooperate with the theme, you should definitely enqueue it. You can find the documentation how to do that somewhere at https://developer.wordpress.org (forgive me, if I do not have the precise link ready here at this moment).
 
@@ -14,7 +14,7 @@ The theme layout behaves fairly responsive, in a minimal basic way. So if you wa
 Enjoy!
 
 Enno Hyttrek, recodeLAB
-March 21, 2021
+April 2021
 
 
 Copyright (C) 2021  Enno Hyttrek
