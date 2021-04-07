@@ -1,6 +1,6 @@
-<footer>
+<footer id="main-footer" class="main-footer">
     <div class="ehy-footer-content-wrapper">
-        <nav>
+        <nav class="footer-nav">
             <?php wp_nav_menu( array( 'theme_location' => 'footer-menu' ) ); ?>
         </nav>
     </div>    

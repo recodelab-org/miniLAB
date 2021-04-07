@@ -16,29 +16,3 @@ https://www.gnu.org/licenses/
     <title><?php bloginfo('title'); ?></title>
     <?php wp_head() ?>
 </head>
-
-<body <?php body_class(); ?>>
-
-    <header>
-        <div class="ehy-header-content-wrapper">
-            <?php if ( is_front_page() ) { ?>            
-            <h1><?php bloginfo('title'); ?> H1</h1>
-            <?php } else { ?>
-                <h2><?php bloginfo('title'); ?> H2</h2>
-            <?php } 
-            ?>
-        </div>
-    </header>
-
-
-    <nav id="main-nav" class="main-nav">
-        <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
-    </nav>
-
-    <nav class="burger-icon" onclick="toggleMobileNav()">
-        <i class="fas fa-bars"></i>
-    </nav>
-
-    <nav id="mobile-nav" class="mobile-nav" onclick="hideMobileNav()">
-        <?php wp_nav_menu( array( 'theme_location' => 'mobile-menu' ) ); ?>
-    </nav>
