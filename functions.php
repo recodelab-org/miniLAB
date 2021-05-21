@@ -2,18 +2,18 @@
 
 function minilab_stylesheets() {
     wp_enqueue_style( 'style', get_stylesheet_uri()); 
-    wp_enqueue_style( 'roboto-font', get_template_directory_uri() . '/fonts/roboto/font-style.css' );
-    wp_enqueue_style( 'petrona-font', get_template_directory_uri() . '/fonts/petrona/font-style.css' );
     wp_enqueue_style( 'inter-font', get_template_directory_uri() . '/fonts/inter/font-style.css' );
     wp_enqueue_style( 'merriweather-font', get_template_directory_uri() . '/fonts/merriweather/font-style.css' );
+    wp_enqueue_style( 'petrona-font', get_template_directory_uri() . '/fonts/petrona/font-style.css' );
     wp_enqueue_style( 'fontawesome', get_template_directory_uri() . '/fonts/fontawesome/css/all.css' );
+    wp_enqueue_style( 'minilab-block-styles', get_template_directory_uri() . '/minilab-block-styles.css' );
 }
 add_action( 'wp_enqueue_scripts', 'minilab_stylesheets' );
 
 function register_my_menus() {
   register_nav_menus(
     array(
-        'header-menu' => __( 'Header Menu' ),
+        'header-menu' => __( 'Main Menu' ),
         'mobile-menu' => __( 'Mobile Menu' ),
         'footer-menu' => __( 'Footer Menu' )
      )
@@ -35,6 +35,24 @@ echo '<div class="front-caption">'.$thumbnail_image[0]->post_excerpt.'</div>';
 }
 } 
 
+//https://wpassist.me/how-to-remove-block-library-css-from-wordpress/
+// /wp-includes/css/dist/block-library/style.min.css
+
+function wpassist_remove_block_library_css(){
+  wp_dequeue_style( 'wp-block-library' );
+} 
+add_action( 'wp_enqueue_scripts', 'wpassist_remove_block_library_css' );
+
+/*
+
+add_action( 'wp_enqueue_scripts', 'remove_block_css', 100 );
+function remove_block_css() {
+    wp_dequeue_style( 'wp-block-library' ); // WordPress core
+    wp_dequeue_style( 'wp-block-library-theme' ); // WordPress core
+    wp_dequeue_style( 'wc-block-style' ); // WooCommerce
+    wp_dequeue_style( 'storefront-gutenberg-blocks' ); // Storefront theme
+}
+*/
 
 /*
 miniLAB – a ridiculously simple wordPress theme.
