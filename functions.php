@@ -35,24 +35,9 @@ echo '<div class="front-caption">'.$thumbnail_image[0]->post_excerpt.'</div>';
 }
 } 
 
-//https://wpassist.me/how-to-remove-block-library-css-from-wordpress/
-// /wp-includes/css/dist/block-library/style.min.css
 
-function wpassist_remove_block_library_css(){
-  wp_dequeue_style( 'wp-block-library' );
-} 
-add_action( 'wp_enqueue_scripts', 'wpassist_remove_block_library_css' );
 
-/*
 
-add_action( 'wp_enqueue_scripts', 'remove_block_css', 100 );
-function remove_block_css() {
-    wp_dequeue_style( 'wp-block-library' ); // WordPress core
-    wp_dequeue_style( 'wp-block-library-theme' ); // WordPress core
-    wp_dequeue_style( 'wc-block-style' ); // WooCommerce
-    wp_dequeue_style( 'storefront-gutenberg-blocks' ); // Storefront theme
-}
-*/
 
 /*
 miniLAB – a ridiculously simple wordPress theme.
