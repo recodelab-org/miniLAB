@@ -4,7 +4,7 @@ A ridiculously simple wordPress theme.
 
 Author: Enno Hyttrek
 Author URI: www.recodelab.com
-Version: 1.2.6
+Version: 1.2.7
 
 Copyright (C) 2020 -2021 Enno Hyttrek
 
@@ -44,6 +44,10 @@ Minimal general reset, what more do you need?
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
 }
 
 ul {

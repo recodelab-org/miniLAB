@@ -8,26 +8,29 @@ Template Post Type: post, page
 <?php get_header(); ?>
 
 <body <?php body_class(); ?>>
-
-
-<main>
-
-
-    <!--The Loop-->
-    <?php while( have_posts() ) : the_post(); ?>
-
- 
-    <article>
-        <section class="content ehy-article-content">
-            <?php the_content(); ?>
-        </section>
-    </article>
+   
+    <div id="upper-wrapper" class="upper-wrapper">
     
 
-    <?php endwhile; ?>
-    <!--Loop ends-->
 
 
-</main>
+            <!--The Loop-->
+            <?php while( have_posts() ) : the_post(); ?>
 
-<?php get_footer(); ?>
+
+            <article>
+                <section class="content ehy-article-content">
+                    <?php the_content(); ?>
+                </section>
+            </article>
+
+
+            <?php endwhile; ?>
+            <!--Loop ends-->
+
+
+
+        </div>
+    <!--#upper wrapper -->
+
+    <?php get_footer(); ?>

@@ -1,7 +1,7 @@
 <footer id="main-footer" class="main-footer">
     <div class="ehy-footer-content-wrapper">
         <nav class="footer-nav">
-            <?php wp_nav_menu( array( 'theme_location' => 'footer-menu' ) ); ?>
+            <?php wp_nav_menu( array( 'theme_location' => 'secondary-menu' ) ); ?>
         </nav>
     </div>    
 </footer>

@@ -16,7 +16,7 @@
 
 
         <nav id="main-nav" class="main-nav">
-            <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
+            <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
         </nav>
 
         <nav class="burger-icon" onclick="toggleMobileNav()">
