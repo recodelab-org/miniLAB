@@ -11,6 +11,7 @@
                 <h2><?php bloginfo('title'); ?></h2>
                 <?php } 
             ?>
+            <p><?php bloginfo('description'); ?></p>
             </div>
         </header>
 

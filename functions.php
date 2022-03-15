@@ -120,6 +120,29 @@ function extra_menu_shortcode() {
 }
 add_shortcode('extra-menu', 'extra_menu_shortcode');
 
+
+//Register Widgets
+function register_my_widgets() {
+    
+        register_sidebar( array(
+		'name'          => 'Footer Widgets 1',
+		'id'            => 'footer-widgets-1',
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+	) );
+    
+        register_sidebar( array(
+		'name'          => 'Footer Widgets 2',
+		'id'            => 'footer-widgets-2',
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+	) );
+
+
+}
+add_action( 'widgets_init', 'register_my_widgets' );
+
+
 add_theme_support( 'post-thumbnails' );
 
 
