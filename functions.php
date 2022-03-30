@@ -145,7 +145,7 @@ add_action( 'widgets_init', 'register_my_widgets' );
 
 add_theme_support( 'post-thumbnails' );
 
-
+/*
 function my_post_thumbnail_caption() {
 global $post;
 
@@ -155,7 +155,21 @@ $thumbnail_image = get_posts(array('p' => $thumbnail_id, 'post_type' => 'attachm
 if ($thumbnail_image && isset($thumbnail_image[0])) {
 echo '<div class="front-caption">'.$thumbnail_image[0]->post_excerpt.'</div>';
 }
-} 
+} */
+
+
+
+/**
+ * Enqueues theme styles for the editor.
+ */
+add_action( 'after_setup_theme', function() {
+
+	// Add support for editor styles.
+	add_theme_support( 'editor-styles' );
+
+	// Enqueue block editor stylesheet.
+	add_editor_style( '/editor-styles.css' );
+} );
 
 
 

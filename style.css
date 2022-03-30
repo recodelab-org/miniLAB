@@ -4,9 +4,9 @@ A ridiculously simple wordPress theme.
 
 Author: Enno Hyttrek
 Author URI: www.recodelab.com
-Version: 1.2.8
+Version: 1.2.12
 
-Copyright (C) 2020 -2021 Enno Hyttrek
+Copyright (C) 2020 -2022 Enno Hyttrek
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
@@ -24,11 +24,29 @@ Fonts
 --------**/
 
 :root {
-    --titlefont: 'Inter', sans-serif;
-    --bodyfont: 'Petrona', serif;
+    --font1: 'Inter', sans-serif;
+    --font2: 'Petrona', serif;
 }
 
+/**--------
+COLORS
+--------**/
 
+:root {
+    --color-type: hsl(200, 42%, 21%);
+    --color-hover: hsl(30, 94%, 55%);
+    --a11: #ad1c4b;
+    --color-prime-green: #95b919; /*was a12*/
+    --color-sek-kuj: #ec2939; /*was a21*/
+    --color-sek-dbr: #0081bd; /*was a22*/
+    --color-sek-fir: #ffb02e; /*was b11*/
+    --b12: #3bb5ab;
+    --b1plus: #00579a;
+    --b21: #a50e6d;
+    --b22: #8d155f;
+    --c11: #57a22b;
+    --c12: #1b852d;
+}
 
 
 /*---------------------
@@ -113,26 +131,30 @@ body {
     font-size: 120%;
 }
 
-.main-header > div,
-.main-nav > div,
-.main-footer > div,
-main {
+.content-block,
+.main-header .container,
+.main-nav > ul,
+.main-footer > div {
     max-width: 1440px;
     margin: 0 auto;
-    
+
 }
 
 main {
-    padding-top: 1em;
-    min-height: 70vh;
+    /*    min-height: 70vh;*/
 }
 
-footer {
+.content-block {
+    padding: 1em 0;
+}
+
+.main-footer {
     min-height: 30vh;
 }
 
 
-
+/***Standard Padding***/
+.ehy-standard-padding,
 figure,
 .burger-icon i,
 .home .my-featured-image,
@@ -144,14 +166,17 @@ h4,
 ul,
 ol,
 p {
-    padding: 1rem 2rem;
+    padding: 1rem 5vw;
 }
 
 p {
     padding-top: 0;
+    padding-bottom: 0;
 }
 
-
+main p {
+    margin-bottom: 1em;
+}
 
 header h1,
 header h2 {
@@ -178,7 +203,87 @@ header h2 {
     padding-right: 0;
 }
 
+/*---------------------
+PATTERNS
+---------------------*/
 
+/**--------
+Pattern: EHy WP Block Query
+--------**/
+
+
+.ehy-wpblock-query {
+    padding: 1rem 0;
+    /*rethink this*/
+}
+
+.ehy-wpblock-query ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ehy-wpblock-query li {
+    position: relative;
+    width: 100%;
+}
+
+.ehy-wpblock-query figure {
+    padding: 0;
+}
+
+/*** the button ***/
+.ehy-wpblock-query .wp-block-post-title a {
+    padding: 0.5em 1em 0.5em 0.5em;
+    color: #fff;
+    background: red;
+    border-radius: 0 1.5em 1.5em 0;
+}
+
+.ehy-wpblock-query ul .wp-block-post-title a:hover {
+    color: red;
+    background: #fff;
+}
+
+.ehy-wpblock-query ul .wp-block-post-title {
+    padding: 0;
+}
+
+/**--------
+Pattern: EHy WP Block Query 01
+--------**/
+
+.ehy-wpblock-query-01 ul .wp-block-post-title {
+    bottom: 0;
+    position: absolute;
+}
+
+
+/**--------
+Pattern: EHy WP Block Query 03
+--------**/
+
+.ehy-wpblock-query-03,
+.ehy-wpblock-query-03 ul,
+.ehy-wpblock-query-03 li {
+    height: auto;
+}
+
+.ehy-wpblock-query-03 li {
+    margin: 0 auto;
+    padding: 1em;
+}
+
+.ehy-wpblock-query-03 figure {}
+
+.ehy-wpblock-query-03 img {
+    border-radius: 50%;
+}
+
+.ehy-wpblock-query-03 p,
+.ehy-wpblock-query-03 h3 {
+    padding: 1em 0;
+    margin: 0;
+}
 
 
 /*---------------------
@@ -194,30 +299,31 @@ nav.main-nav {
 }
 
 
-nav > div > ul {
+nav > ul {
     display: flex;
     flex-wrap: wrap;
 }
 
-nav > div > ul > li {
+nav > ul > li {
     position: relative;
 }
 
-nav > div > ul > li > ul {
+nav > ul > li > ul {
     display: none;
     position: absolute;
     padding: 0.2em;
 }
 
-nav > div > ul > li:hover > ul {
+nav > ul > li:hover > ul {
     display: block;
 }
 
- 
+
 
 nav li {
     list-style-type: none;
     margin-right: 1em;
+    white-space: nowrap;
 }
 
 .my-featured-image .front-caption a,
@@ -285,52 +391,82 @@ TYPOGRAPHY
 ---------------------*/
 
 body {
-    font-family: var(--titlefont);
+    font-family: var(--font1);
     font-weight: 300;
     line-height: 1.3;
 }
 
-h1,h3,h4 {
+.font-1 {
+    font-family: var(--font1);
+}
+
+.font-2 {
+    font-family: var(--font2);
+}
+
+
+h1,
+h2,
+h3,
+h4 {
     font-weight: 600;
 }
 
-h2 {
-    font-weight: 100;
-}
-
-
-article p,
-article ul {
-    font-family: var(--bodyfont);
-}
-
-
-
-
-footer p {
+main h2 {
     font-weight: 300;
 }
 
 
-.footer-nav {
-    font-weight: 300;
+.ehy-wpblock-query-03 p,
+h1,
+h2,
+.content-block h3 {
+    font-family: var(--font2);
 }
+
+nav ul {
+    font-family: var(--font1);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+
+.ehy-wpblock-query-03 p {
+    font-style: italic;
+}
+
+
+
+
+footer p,
+footer ul {
+    font-weight: 300;
+    font-size: 0.8em
+}
+
+
 
 /**--------
 Font Sizes
 --------**/
 
-h1,h2 {
-    font-size: 2.1em;
+header h1 {
+    font-size: 3.4em;
+}
+
+h1,
+h2 {
+    font-size: 2.4em;
 }
 
 h3 {
-    font-size: 1.3em;
+    font-size: 1.8em;
 }
 
 h4 {
     font-size: 1em;
 }
+
 
 .main-footer {
     font-size: 0.8em;
@@ -341,10 +477,13 @@ h4 {
  COLOR & STYLE
 ---------------------*/
 
+
+
 body {
-    background: hsl(200, 13%, 21%);
+    background: red;
 }
 
+body,
 .upper-wrapper {
     background: #fff;
 }
@@ -365,21 +504,52 @@ header a {
 }
 
 
-footer,
-footer a {
+.main-footer,
+.main-footer a {
     color: hsl(200, 34%, 89%);
 }
 
 .main-footer {
     border-top: 1px solid rgba(255, 255, 255, 0.3);
+    background: hsl(200, 13%, 21%);
 }
 
-nav > div > ul > li > ul {
-    background: hsla(200, 13%, 21%,0.8);
+nav > ul > li > ul {
+    background: hsla(200, 13%, 21%, 0.8);
 }
 
-nav > div > ul > li > ul a {
-        color: #fff;
+nav > ul > li > ul a {
+    color: #fff;
+}
+
+.content-block p,
+.content-block h2,
+.content-block h3 {
+    color: var(--color-type);
+}
+
+
+/*** the button query general ***/
+.ehy-wpblock-query .wp-block-post-title a {
+    color: hsl(200, 21%, 94%);
+    background: hsl(200, 21%, 42%);
+}
+
+.ehy-wpblock-query ul .wp-block-post-title a:hover {
+    color: #fff;
+    background: var(--color-hover);
+}
+
+
+/*** the button query 03 ***/
+.ehy-wpblock-query-03 .wp-block-post-title a {
+    color: var(--color-type);
+    background: none;
+}
+
+.ehy-wpblock-query-03 ul .wp-block-post-title a:hover {
+    color: var(--color-hover);
+    background: none;
 }
 
 
@@ -403,14 +573,33 @@ Color Combos
 }
 
 .cool-dark-grey {
-    background: hsl(200,55%,13%);
-    color: hsl(200,13%,89%);
+    background: hsl(200, 55%, 13%);
+    color: hsl(200, 13%, 89%);
+}
+
+
+/**--------
+Color Classes
+--------**/
+
+
+.color-a12 {
+    color: var(--wp--preset--color--a-12) !important;
 }
 
 
 /*---------------------
 RESPONSIVE DESIGN (MOBILE FIRST)
 ---------------------*/
+
+@media only screen and (min-width: 400px) {
+
+    .ehy-wpblock-query-03 li {
+        padding: 0 2em;
+    }
+
+}
+
 
 @media only screen and (min-width: 544px) {
 
@@ -438,38 +627,138 @@ RESPONSIVE DESIGN (MOBILE FIRST)
 
 @media only screen and (min-width: 720px) {
 
-    .multi-col {
-        column-count: 2;
+
+
+    .col-multi {
+        column-count: 3;
     }
 
+    .col-single {
+        padding-right: 25%;
+    }
+
+
+    /**--------
+Pattern: EHy WP Block Query, BP 720
+--------**/
+
+
+    .ehy-wpblock-query {
+        padding: 1rem 5vw;
+    }
+
+    .ehy-wpblock-query figure,
+    .ehy-wpblock-query .wp-block-post-title {
+        margin-right: 1px;
+        margin-bottom: 1px;
+    }
+
+    .ehy-wpblock-query-01 li {
+        width: 50%;
+    }
+
+    .ehy-wpblock-query-02 li,
+    .ehy-wpblock-query-03 li {
+        width: 33%;
+    }
+
+    .ehy-wpblock-query-02 .wp-block-post-title a {
+        margin-top: 3px;
+        display: inline-block;
+        width: 9em;
+        border-radius: 0 3em 3em 0;
+    }
+
+
+
+
+
+
+
+
+
 }
 
 
 
-@media only screen and (min-width: 960px) {
-
-
-
-}
+@media only screen and (min-width: 960px) {}
 
 @media only screen and (min-width: 1024px) {
 
     body {
         font-size: 110%;
     }
-    
-        .multi-col {
+
+    .col-multi {
         column-count: 3;
     }
 
+
+
+    .ehy-wpblock-query-01 li {
+        width: 25%;
+    }
+
+    .ehy-wpblock-query-02 .wp-block-post-title a {
+        display: inline-block;
+        width: auto;
+        border-radius: 0 1.5em 1.5em 0;
+    }
+
+    /**--------
+Pattern: EHy WP Block Query, BP 1024
+--------**/
+
+    .ehy-wpblock-query-03 {
+        font-size: 1em;
+    }
+    
+        .ehy-wpblock-query-03 li {
+        padding: 0 1em;
+    }
+
+    .ehy-wpblock-query-03 figure {
+        padding: 0 10%;
+    }
+
+
+
+
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1460px) {
 
     body {
         font-size: 120%;
     }
 
+    /***Standard Padding***/
+    .ehy-wpblock-query,
+    .ehy-standard-padding,
+    figure,
+    .burger-icon i,
+    .home .my-featured-image,
+    .more-link,
+    h1,
+    h2,
+    h3,
+    h4,
+    ul,
+    ol,
+    p {
+        padding: 1rem 0;
+    }
+
+    p {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    /*
+    .ehy-wpblock-query-02 {
+        padding: 1rem 5vw;
+    }
+*/
 
 
 }
@@ -478,3 +767,60 @@ RESPONSIVE DESIGN (MOBILE FIRST)
 /*---------------------
 DEV (TMP)
 ---------------------*/
+
+
+
+
+
+
+
+/*
+
+.ehy-wpblock-query-01 ul figure,
+.ehy-wpblock-query-01 ul .wp-block-post-title {
+    position: absolute;
+}
+
+.ehy-wpblock-query ul figure {
+    padding: 0;
+    padding-right: 1px;
+}
+
+.ehy-wpblock-query ul .wp-block-post-title {
+padding: 0;
+}
+
+
+.ehy-wpblock-query ul .wp-block-post-title a {
+    padding: 0.5em 1em 0.5em 0.5em;
+       color: #fff; 
+    background: red;
+    border-radius: 0 1.5em 1.5em 0;
+}
+
+
+.ehy-wpblock-query ul .wp-block-post-title a:hover {
+       color: red; 
+    background: #fff;
+}
+
+*/
+
+
+main {
+    min-height: 150vh;
+}
+
+
+
+
+
+
+h2,
+h3 {
+    column-span: all;
+}
+
+.content-block {
+    margin-bottom: 1em;
+}

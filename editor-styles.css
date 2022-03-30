@@ -1,0 +1,28 @@
+/*
+This stylesheet is to adjust the design of the WP editor backend.
+Please use carefully!
+Reference (German):
+https://krautpress.de/2020/gutenberg-editor-styles/
+*/
+
+
+/* Main column width */
+.content-block {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+
+
+/* EHy query cards */
+
+.ehy-wpblock-query ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.ehy-wpblock-query ul li {
+    width: 25%;
+}

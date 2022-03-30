@@ -1,3 +1,65 @@
 {
-    "version": 2
+    "version": 2,
+    "settings": {
+        "color": {
+            "palette": [
+                {
+                    "name": "A1.1",
+                    "slug": "a11",
+                    "color": "#ad1c4b"
+                },
+                {
+                    "name": "A.1.2",
+                    "slug": "a12",
+                    "color": "#95b919"
+                },
+                {
+                    "name": "A2.1",
+                    "slug": "a21",
+                    "color": "#ec2939"
+                },
+                {
+                    "name": "A2.2",
+                    "slug": "a22",
+                    "color": "#0081bd"
+                },
+                {
+                    "name": "B1.1",
+                    "slug": "b11",
+                    "color": "#ffb02e"
+                },
+                {
+                    "name": "B1.2",
+                    "slug": "b12",
+                    "color": "#3bb5ab"
+                },
+                {
+                    "name": "B1+",
+                    "slug": "b1plus",
+                    "color": "#00579a"
+                },
+                {
+                    "name": "B2.1",
+                    "slug": "b21",
+                    "color": "#a50e6d"
+                },
+                {
+                    "name": "B2.2",
+                    "slug": "b22",
+                    "color": "#8d155f"
+                },
+                {
+                    "name": "C1.1",
+                    "slug": "C11",
+                    "color": "#57a22b"
+                },
+                {
+                    "name": "C1.2",
+                    "slug": "C12",
+                    "color": "#1b852d"
+                }
+
+            ]
+        }
+    }
 }
