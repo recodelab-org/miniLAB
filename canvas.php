@@ -18,11 +18,9 @@ Template Post Type: post, page
             <?php while( have_posts() ) : the_post(); ?>
 
 
-            <article>
-                <section class="content ehy-article-content">
+            
                     <?php the_content(); ?>
-                </section>
-            </article>
+          
 
 
             <?php endwhile; ?>

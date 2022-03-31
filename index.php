@@ -34,52 +34,23 @@
             <?php wp_nav_menu( array( 'theme_location' => 'mobile-menu' ) ); ?>
         </nav>
 
-        <div id="main-wrapper" class="main-wrapper">
-            <main>
 
 
-                <!--The Loop-->
-                <?php while( have_posts() ) : the_post(); ?>
 
-                <?php if ( is_singular() ) { ?>
-                <article>
-                    <section class="content ehy-article-content">
-                        <?php the_content(); ?>
-                    </section>
-                </article>
-                <?php } else { ?>
-                <div class="ehy-post-page-wrapper">
-                    <article>
-
-                        <figure class="image my-featured-image">
-                            <?php echo the_post_thumbnail()?>
-
-                            <?php 
-                if (my_post_thumbnail_caption()) { 
-                 my_post_thumbnail_caption(); 
-                }
-                ?>
+            <!--The Loop-->
+            <?php while( have_posts() ) : the_post(); ?>
 
 
-                        </figure>
-
-                        <section class="content ehy-article-content">
-                            <h3><a href="<?php echo esc_url( get_permalink() ); ?>" class="link"><?php the_title(); ?></a></h3>
-                            <?php the_excerpt(); ?>
-                        </section>
-
-                    </article>
-                </div>
-                <?php } 
-        ?>
-
-                <?php endwhile; ?>
-                <!--Loop ends-->
+            
+                    <?php the_content(); ?>
+          
 
 
-            </main>
-        </div>
-        <!--#main wrapper -->
+            <?php endwhile; ?>
+            <!--Loop ends-->
+
+
+
     </div>
     <!--#upper wrapper -->
     
