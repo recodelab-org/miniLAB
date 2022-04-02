@@ -3,6 +3,21 @@
     "settings": {
         "color": {
             "palette": [
+                                {
+                    "name": "Cool Dark Grey",
+                    "slug": "cool-dark-grey",
+                    "color": "hsl(200,21%,13%)"
+                },
+                                {
+                    "name": "Cool Mid Grey",
+                    "slug": "cool-mid-grey",
+                    "color": "hsl(200,42%,34%)"
+                },
+                                {
+                    "name": "Cool Light Grey",
+                    "slug": "cool-light-grey",
+                    "color": "hsl(200,21%,89%)"
+                },
                 {
                     "name": "A1.1",
                     "slug": "a11",

@@ -36,16 +36,22 @@ COLORS
     --color-type: hsl(200, 42%, 21%);
     --color-hover: hsl(30, 94%, 55%);
     --a11: #ad1c4b;
-    --color-prime-green: #95b919; /*was a12*/
-    --color-sek-kuj: #ec2939; /*was a21*/
-    --color-sek-dbr: #0081bd; /*was a22*/
-    --color-sek-fir: #ffb02e; /*was b11*/
+    --color-prime-green: #95b919;
+    /*was a12*/
+    --color-sek-kuj: #ec2939;
+    /*was a21*/
+    --color-sek-dbr: #0081bd;
+    /*was a22*/
+    --color-sek-fir: #ffb02e;
+    /*was b11*/
     --b12: #3bb5ab;
     --b1plus: #00579a;
     --b21: #a50e6d;
     --b22: #8d155f;
     --c11: #57a22b;
     --c12: #1b852d;
+    --color-primary-4: #B5C6CF;
+     --color-primary-4-dark: #396A74;
 }
 
 
@@ -108,8 +114,8 @@ Reset some annoying Gutenberg Block Layout (review this!)
     flex-basis: 100%;
 }
 
-/* 
-.wp-block-cover, 
+
+.wp-block-cover,
 .wp-block-cover-image {
     padding: 0;
     min-height: 0;
@@ -119,7 +125,7 @@ Reset some annoying Gutenberg Block Layout (review this!)
 .wp-block-column:not(:first-child) {
     margin: 0;
 }
- */
+
 
 
 
@@ -183,6 +189,8 @@ header h2 {
     padding-top: 17vw;
 }
 
+
+
 .my-featured-img {
     width: 100%;
 }
@@ -204,11 +212,28 @@ header h2 {
 }
 
 /*---------------------
-PATTERNS
+Components
 ---------------------*/
 
 /**--------
-Pattern: EHy WP Block Query
+Component: ml Page Title
+--------**/
+
+.ml-page-title-wrapper .content-block {
+    padding: 0.2em 0 0.5em 0;
+}
+
+h1.ml-page-title {
+    margin: 0;
+    padding: 0 1em 0.1em 5vw;
+    border-radius: 0 1em 1em 0;
+    font-weight: 500;
+    font-size: 1.5em;
+}
+
+
+/**--------
+Component: EHy WP Block Query
 --------**/
 
 
@@ -249,7 +274,7 @@ Pattern: EHy WP Block Query
 }
 
 /**--------
-Pattern: EHy WP Block Query 01
+Component: EHy WP Block Query 01
 --------**/
 
 .ehy-wpblock-query-01 ul .wp-block-post-title {
@@ -259,7 +284,7 @@ Pattern: EHy WP Block Query 01
 
 
 /**--------
-Pattern: EHy WP Block Query 03
+Component: EHy WP Block Query 03
 --------**/
 
 .ehy-wpblock-query-03,
@@ -283,6 +308,49 @@ Pattern: EHy WP Block Query 03
 .ehy-wpblock-query-03 h3 {
     padding: 1em 0;
     margin: 0;
+}
+
+/**--------
+Component: Card A
+--------**/
+
+.card-a li {
+    width: 360px;
+    margin-right: 1em;
+    margin-bottom: 5em;
+}
+
+.card-a li p {
+    padding: 0;
+}
+
+.card-a li figure {
+    width: 100% !important;
+    overflow: hidden;
+}
+
+.card-a li figure img {
+    object-fit: cover;
+    border-radius: 10%;
+    height: 360px
+}
+
+
+.card-a .wp-block-post-excerpt__excerpt {
+    padding-top: 0.5em;
+}
+
+
+.card-a .wp-block-post-excerpt__more-text a {
+    display: inline-block;
+    width: 80%;
+    padding: 0.5em 2em 0.5em 0;
+    border-radius: 0 2em 2em 0;
+    margin-top: 0.5em;
+    font-family: var(--font2);
+    font-size: 1.2em;
+    font-weight: 600;
+    text-align: right;
 }
 
 
@@ -416,13 +484,18 @@ main h2 {
     font-weight: 300;
 }
 
+h1 {
+    font-family: var(--font2);
+}
+
 
 .ehy-wpblock-query-03 p,
-h1,
+.home h1,
 h2,
 .content-block h3 {
     font-family: var(--font2);
 }
+
 
 nav ul {
     font-family: var(--font1);
@@ -501,6 +574,10 @@ main {
 header,
 header a {
     color: hsl(200, 21%, 34%);
+}
+
+.ml-site-title {
+    background: var(--color-prime-green);
 }
 
 
@@ -587,21 +664,13 @@ Color Classes
     color: var(--wp--preset--color--a-12) !important;
 }
 
-.color-kat-01 {
-    
-}
+.color-kat-01 {}
 
-.color-kat-02 {
-    
-}
+.color-kat-02 {}
 
-.color-kat-03 {
-    
-}
+.color-kat-03 {}
 
-.color-kat-04 {
-    
-}
+.color-kat-04 {}
 
 
 /*---------------------
@@ -644,6 +713,9 @@ RESPONSIVE DESIGN (MOBILE FIRST)
 @media only screen and (min-width: 720px) {
 
 
+    .main-header {
+        min-height: 34vw;
+    }
 
     .col-multi {
         column-count: 3;
@@ -728,8 +800,8 @@ Pattern: EHy WP Block Query, BP 1024
     .ehy-wpblock-query-03 {
         font-size: 1em;
     }
-    
-        .ehy-wpblock-query-03 li {
+
+    .ehy-wpblock-query-03 li {
         padding: 0 1em;
     }
 
@@ -742,7 +814,7 @@ Pattern: EHy WP Block Query, BP 1024
 
 }
 
-@media only screen and (min-width: 1460px) {
+@media only screen and (min-width: 1500px) {
 
     body {
         font-size: 120%;
@@ -770,6 +842,12 @@ Pattern: EHy WP Block Query, BP 1024
         padding-bottom: 0;
     }
 
+
+
+    h1.ml-page-title {
+        padding: 0 1em 0.1em 0;
+    }
+
     /*
     .ehy-wpblock-query-02 {
         padding: 1rem 5vw;
@@ -784,11 +862,27 @@ Pattern: EHy WP Block Query, BP 1024
 DEV (TMP)
 ---------------------*/
 
+.main-header .container {
+    position: relative;
+}
+
+h2.ml-site-title {
+    position: absolute;
+    top: 0;
+    padding: 0;
+}
 
 
 
+.category-kursgruppe-4 .wp-block-post-excerpt__more-text a {
+background: var(--color-primary-4);
+    color: var(--color-primary-4-dark);
+}
 
-
+.category-kursgruppe-4 .wp-block-post-excerpt__more-text a:hover {
+background: var(--color-primary-4-dark);
+    color: var(--color-primary-4);
+}
 
 /*
 
